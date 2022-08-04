@@ -4,14 +4,9 @@ import "./NavBar.css"
 
 const NavBar= () => {
 
-    let activeStyle = {
-        textDecoration: "underline",
-    };
-    
-    let activeClassName = "underline";
 
     return (
-            <nav classname="navbar">
+            <nav className="navbar">
                 <h1> Pepper Picker </h1>
                 <Link to="/">
                     <p> All Peppers Link Here </p>

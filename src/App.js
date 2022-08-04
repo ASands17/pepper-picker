@@ -1,9 +1,9 @@
-import React, { FC, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import AllPeppers from "./AllPeppers"
 import MyPeppers from "./MyPeppers"
 import PepperDetails from "./PepperDetails"
 import NavBar from "./NavBar.js"
-import { Route, Link } from "react-router-dom";
+import { Route } from "react-router-dom";
 
 const App= () => {
 
@@ -33,7 +33,10 @@ useEffect(() => {
       <Route
       exact path="/"
       render={() => (
-        <AllPeppers pepperPreview={peppers} error={error}/>
+        <AllPeppers 
+        pepperPreview={peppers} 
+        error={error} 
+        />
       )}
       />
       <Route
@@ -42,8 +45,10 @@ useEffect(() => {
         <MyPeppers />
       )}
       />
-    {/* <AllPeppers pepperPreview={peppers} error={error}/>
-    <PepperDetails /> */}
+      <Route path="/peppers/:id">
+          <PepperDetails />
+        </Route>
+  
     </div>
   )
 }
