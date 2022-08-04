@@ -1,7 +1,9 @@
 import React, { FC, useEffect, useState } from "react";
 import AllPeppers from "./AllPeppers"
+import MyPeppers from "./MyPeppers"
 import PepperDetails from "./PepperDetails"
 import NavBar from "./NavBar.js"
+import { Route, Link } from "react-router-dom";
 
 const App= () => {
 
@@ -28,8 +30,20 @@ useEffect(() => {
   return(
     <div>
       <NavBar />
-    <AllPeppers pepperPreview={peppers} error={error}/>
-    <PepperDetails />
+      <Route
+      exact path="/"
+      render={() => (
+        <AllPeppers pepperPreview={peppers} error={error}/>
+      )}
+      />
+      <Route
+      exact path="/my-peppers"
+      render={() => (
+        <MyPeppers />
+      )}
+      />
+    {/* <AllPeppers pepperPreview={peppers} error={error}/>
+    <PepperDetails /> */}
     </div>
   )
 }
