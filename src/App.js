@@ -1,6 +1,7 @@
 import React, { FC, useEffect, useState } from "react";
 import AllPeppers from "./AllPeppers"
 import PepperDetails from "./PepperDetails"
+import NavBar from "./NavBar.js"
 
 const App= () => {
 
@@ -26,7 +27,7 @@ useEffect(() => {
 
   return(
     <div>
-      <h1>FULL APP RENDER</h1>
+      <NavBar />
     <AllPeppers pepperPreview={peppers} error={error}/>
     <PepperDetails />
     </div>
