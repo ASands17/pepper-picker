@@ -1,13 +1,20 @@
 import React, { FC, useState } from "react";
 import PepperCard from "./PepperCard"
+import "./AllPeppers.css"
 
-const AllPeppers= () => {
+const AllPeppers= (props) => {
+
+    let pepperPreviews= props.pepperPreview.map(pepper => {
+        return(
+            <div className="all-cards-holder">
+            <PepperCard pepper={pepper} />
+            </div>
+        )
+    })
+
     return(
-        <div>
-        <h2>All peppers component</h2>
-            <PepperCard />
-            <PepperCard />
-            <PepperCard />
+        <div className="grid">
+        {pepperPreviews}
         </div>
     )
 }
