@@ -1,0 +1,12 @@
+.pepperCard {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    justify-content: center;
+    align-items: center;
+}
+
+.pepperCardImage {
+    height: 300px;
+    width: 250px;
+}
