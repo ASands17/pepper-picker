@@ -1,8 +1,14 @@
 import React, { FC, useState } from "react";
+import AllPeppers from "./AllPeppers"
+import PepperDetails from "./PepperDetails"
 
 const App= () => {
   return(
-    <div>APP RENDER</div>
+    <div>
+      <h1>FULL APP RENDER</h1>
+    <AllPeppers />
+    <PepperDetails />
+    </div>
   )
 }
 
