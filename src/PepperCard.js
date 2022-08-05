@@ -21,7 +21,8 @@ const PepperCard = ({pepper, selected, isChecked}) => {
             <h2>Spice Level: {pepper.spiceLevel}</h2>
             
             <label>
-                <input 
+                <input
+                data-cy="checkbox"
                 type="checkbox"
                 checked={checked}
                 onChange={handleChange} 

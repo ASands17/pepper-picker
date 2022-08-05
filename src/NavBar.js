@@ -6,13 +6,13 @@ const NavBar= () => {
 
 
     return (
-            <nav className="navbar">
+            <nav data-cy="navbar" className="navbar">
                 <h1> Pepper Picker </h1>
                 <Link to="/">
-                    <p> All Peppers Link Here </p>
+                    <p> All Peppers </p>
                 </Link>
                 <Link to="/my-peppers">
-                    <p> My Peppers Link Here </p>
+                    <p data-cy="my-peppers-link"> My Peppers </p>
                 </Link>
             </nav>
     )

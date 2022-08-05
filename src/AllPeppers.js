@@ -9,14 +9,14 @@ const AllPeppers= ({pepperPreview, error, selected}) => {
 
     let pepperPreviews= pepperPreview.map(pepper => {
         return(
-            <div className="all-cards-holder">
+            <div className="all-cards-holder" data-cy="all-cards-holder">
             <PepperCard pepper={pepper} selected={selected} isChecked={pepper.isSelected}/>
             </div>
         )
     })
 
     return(
-        <div className="grid">
+        <div className="grid" data-cy="grid">
         {pepperPreviews}
         </div>
     )
