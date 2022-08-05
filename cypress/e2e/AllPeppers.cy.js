@@ -39,6 +39,14 @@ describe('All Peppers Flow', () => {
       .check()
   })
 
+  it('Should navigate to pepper details page when pepper name is clicked"', () => {
+    cy.get('[data-cy="all-cards-holder"]').eq(1)
+      .find('[data-cy="pepper-name-link"]')
+      .should('contain', 'Habanada')
+      .click()
+    cy.url().should('eq', 'http://localhost:3000/peppers/17')
+  })
+
   it('Should route to My Peppers page when link is clicked"', () => {
     cy.get('[data-cy="all-cards-holder"]').eq(1)
     .find('[data-cy="checkbox"]')
