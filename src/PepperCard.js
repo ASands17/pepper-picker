@@ -1,26 +1,24 @@
 import { Link } from "react-router-dom";
 import "./PepperCard.css"
 import React, { useState } from "react";
+import PropTypes from 'prop-types';
 
-const PepperCard = (props) => {
+const PepperCard = ({pepper, selected, isChecked}) => {
 
-    const [checked, setChecked] = useState(props.isChecked);
+    const [checked, setChecked] = useState(isChecked);
 
     let handleChange = () => {
         setChecked(!checked);
-        props.selected(props.pepper.id, !checked);
+        selected(pepper.id, !checked);
     }
-
-    
-
 
     return (
         <div className="pepperCard">
-            <Link to={`peppers/${props.pepper.id}`}>
-            <h2>{props.pepper.name}</h2>
+            <Link to={`peppers/${pepper.id}`}>
+            <h2>{pepper.name}</h2>
             </Link>
-            <img className="pepperCardImage" src={props.pepper.imageUrl} />
-            <h2>Spice Level: {props.pepper.spiceLevel}</h2>
+            <img className="pepperCardImage" src={pepper.imageUrl} />
+            <h2>Spice Level: {pepper.spiceLevel}</h2>
             
             <label>
                 <input 
@@ -34,5 +32,12 @@ const PepperCard = (props) => {
         
     )
 }
+
+PepperCard.propTypes = {
+    pepper: PropTypes.object,
+    selected: PropTypes.func,
+    isChecked: PropTypes.bool,
+}
+
 
 export default PepperCard;

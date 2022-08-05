@@ -25,8 +25,6 @@ const PepperDetails = () => {
         getDetails();
     }, []);
 
-    console.log("Pep info", pepperInfo)
-
     return(
         <div className="detailsDisplay">
             <h1> {pepperInfo.name} </h1>
@@ -34,7 +32,7 @@ const PepperDetails = () => {
             <h2>Care Instructions</h2>
             <p> {pepperInfo.waterInfo} </p>
             <p> {pepperInfo.sunInfo} </p>
-            <p> {pepperInfo.HarvestInfo} </p>
+            <p> {pepperInfo.harvestInfo} </p>
             <h2>More information</h2>
             <p> Origin: {pepperInfo.origin}</p>
             <p> {pepperInfo.flavorProfile} </p>

@@ -1,15 +1,16 @@
 import React, { FC, useState } from "react";
+import PropTypes from 'prop-types';
 import PepperCard from "./PepperCard"
 import "./AllPeppers.css"
 
 
-const AllPeppers= (props) => {
+const AllPeppers= ({pepperPreview, error, selected}) => {
 
 
-    let pepperPreviews= props.pepperPreview.map(pepper => {
+    let pepperPreviews= pepperPreview.map(pepper => {
         return(
             <div className="all-cards-holder">
-            <PepperCard pepper={pepper} selected={props.selected} isChecked={pepper.isSelected}/>
+            <PepperCard pepper={pepper} selected={selected} isChecked={pepper.isSelected}/>
             </div>
         )
     })
@@ -19,6 +20,12 @@ const AllPeppers= (props) => {
         {pepperPreviews}
         </div>
     )
+}
+
+AllPeppers.propTypes = {
+    pepperPreview: PropTypes.array,
+    error: PropTypes.string,
+    selected: PropTypes.func
 }
 
 export default AllPeppers;
