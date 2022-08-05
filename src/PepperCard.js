@@ -7,8 +7,12 @@ const PepperCard= (props) => {
     const [checked, setChecked] = useState(false);
 
     let handleChange= () => {
-        setChecked(!checked)
+        setChecked(!checked);
+        props.selected(props.pepper.id);
     }
+
+    
+
 
     return (
         <div className="pepperCard">
@@ -17,13 +21,16 @@ const PepperCard= (props) => {
             </Link>
             <img className="pepperCardImage" src={props.pepper.imageUrl} />
             <h2>Spice Level: {props.pepper.spiceLevel}</h2>
+            <div style={{ visibility: checked ? 'hidden': 'visible'}}>
             <label>
                 <input 
                 type="checkbox"
                 checked={checked}
-                onChange={handleChange} />
+                onChange={handleChange} 
+                />
                 Add to My Peppers
-                </label>
+            </label>
+            </div>
         </div>
     )
 }

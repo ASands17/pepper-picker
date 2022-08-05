@@ -1,9 +1,25 @@
 import React, { FC, useState } from "react";
+import PepperCard from "./PepperCard.js"
 
-const MyPeppers=() => {
+const MyPeppers = (props) => {
+
+    // console.log("Selected", props.selectedPeppers)
+
+    const selectedPeppers = props.selectedPeppers.map(pepper => {
+        return(
+        <div className="cards-holder">
+        <PepperCard pepper={pepper} selected={props.selected} />
+        </div>
+        )
+    })
+
     return (
-        <h1> You don't have any peppers selected right now. Go pick a pepper! </h1>
+        <div className="grid">
+            {selectedPeppers}
+        </div>  
     )
 }
 
 export default MyPeppers;
+
+
