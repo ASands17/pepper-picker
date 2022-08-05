@@ -5,6 +5,7 @@ import PepperDetails from "./PepperDetails"
 import NavBar from "./NavBar.js"
 import { Route } from "react-router-dom";
 
+
 const App= () => {
 
   const [peppers, setPeppers] = useState([]);
