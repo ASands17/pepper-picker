@@ -15,7 +15,9 @@ const App= () => {
   const getPeppers = async () => {
     try {
     const response = await fetch("https://polar-inlet-62371.herokuapp.com/peppers");
-    const allPeppers = await response.json();
+    const peppers = await response.json();
+    const allPeppers = peppers.map(pep => ({...pep, isSelected: false}))
+
     setPeppers(allPeppers);
     } catch (error) {
       setError(
@@ -28,12 +30,25 @@ useEffect(() => {
   getPeppers();
 }, []);
 
-const getSelected = (id) => {
+const getSelected = (id, isChecked) => {
   peppers.forEach((pep) => {
-    if (pep.id === id) {
+    if (pep.id === id && isChecked) {
       selectedPeppers.push(pep);
+      pep.isSelected = true;
+    } if (pep.id === id && !isChecked) {
+      pep.isSelected = false;
     }
   });
+  
+  if (!isChecked) {
+    selectedPeppers.forEach((pep, i) => {
+      if (pep.id === id) {
+        selectedPeppers.splice(i, 1);
+      }
+    });
+  }
+  setPeppers(peppers);
+  console.log(peppers)
 }
 
   return(
@@ -56,6 +71,7 @@ const getSelected = (id) => {
         selectedPeppers={selectedPeppers}
         pepperPreview={peppers}
         error={error}
+        selected={getSelected} 
         />
       )}
       />

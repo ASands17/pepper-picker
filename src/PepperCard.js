@@ -2,13 +2,13 @@ import { Link } from "react-router-dom";
 import "./PepperCard.css"
 import React, { useState } from "react";
 
-const PepperCard= (props) => {
+const PepperCard = (props) => {
 
-    const [checked, setChecked] = useState(false);
+    const [checked, setChecked] = useState(props.isChecked);
 
-    let handleChange= () => {
+    let handleChange = () => {
         setChecked(!checked);
-        props.selected(props.pepper.id);
+        props.selected(props.pepper.id, !checked);
     }
 
     
@@ -21,7 +21,7 @@ const PepperCard= (props) => {
             </Link>
             <img className="pepperCardImage" src={props.pepper.imageUrl} />
             <h2>Spice Level: {props.pepper.spiceLevel}</h2>
-            <div style={{ visibility: checked ? 'hidden': 'visible'}}>
+            
             <label>
                 <input 
                 type="checkbox"
@@ -30,8 +30,8 @@ const PepperCard= (props) => {
                 />
                 Add to My Peppers
             </label>
-            </div>
         </div>
+        
     )
 }
 
