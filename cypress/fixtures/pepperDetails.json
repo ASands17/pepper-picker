@@ -1,0 +1,41 @@
+[
+    {
+        "id": 16,
+        "name": "Fish Pepper",
+        "waterInfo": "Keep soil lightly moist, not wet",
+        "sunInfo": "Needs at least 6 hours of sun daily",
+        "harvestInfo": "Harvest when 3-5 inches long and deep green or red",
+        "origin": "United States",
+        "flavorProfile": "Bold, tangy",
+        "scovilleUnits": "5,000 to 30,000",
+        "funFact": "The African-American communities of the Chesapeake Bay area and major cities of the region (Baltimore and Philadelphia in particular) took to this chili and made it a culinary staple for oyster and crab houses. That’s where the name for this chili was coined.",
+        "seedLink": "https://trueloveseeds.com/products/fish-pepper",
+        "imageUrl": "https://assets.epicurious.com/photos/6065d92c8af215759419a4aa/1:1/w_1126,h_1126,c_limit/fish_pepper_HERO_VOG_final.jpg"
+    },
+    {
+        "id": 17,
+        "name": "Habanada",
+        "waterInfo": "Wait until soil is dry, then water deeply",
+        "sunInfo": "Needs at least 6 hours of sun daily",
+        "harvestInfo": "Harvest when 2-3 inches long and orange",
+        "origin": "USA",
+        "flavorProfile": "Floral, citrusy, notes of guava",
+        "scovilleUnits": "0",
+        "funFact": "The habanada pepper was developed by Michael Mazourek, a plant breeder at Cornell.",
+        "seedLink": "https://www.rareseeds.com/habanada-sweet-pepper",
+        "imageUrl": "https://www.highmowingseeds.com/media/catalog/product/cache/6cbdb003cf4aae33b9be8e6a6cf3d7ad/2/8/2824.jpg"
+    },
+    {
+        "id": 18,
+        "name": "Serrano",
+        "waterInfo": "Keep soil slightly moist, not wet",
+        "sunInfo": "Needs at least 6 hours of sun daily",
+        "harvestInfo": "Harvest when 2-4 inches long and firm",
+        "origin": "Mexico",
+        "flavorProfile": "Bright, grassy, smokey when red in color",
+        "scovilleUnits": "10,000 to 23,000",
+        "funFact": "Serrano peppers are hot chile peppers named for the mountain ridges in Mexico where they originated. They are considered a fruit, and they are popular in Mexican cuisine—only second to the jalapeño pepper in popularity.",
+        "seedLink": "https://seedsofchange.com/seeds/vegetables/organic-serrano-pepper-seeds",
+        "imageUrl": "https://www.isabeleats.com/wp-content/uploads/2019/09/serrano-pepper-small-1.jpg"
+    }
+]

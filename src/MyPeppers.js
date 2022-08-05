@@ -3,16 +3,20 @@ import PepperCard from "./PepperCard.js"
 import PropTypes from 'prop-types';
 
 
+
 const MyPeppers = ({selectedPeppers, pepperPreview, error, selected}) => {
+
 
     return (
         <div className="grid">
             {selectedPeppers.map(pepper => {
-                return(
-                <div className="cards-holder">
-                <PepperCard pepper={pepper} selected={selected} isChecked={true}/>
-                </div>
-                )
+                if (pepper.isSelected) {
+                    return(
+                        <div className="cards-holder">
+                        <PepperCard pepper={pepper} selected={selected} isChecked={true}/>
+                        </div>
+                
+                )}
             })}
         </div>  
     )
