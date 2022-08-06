@@ -1,0 +1,20 @@
+[
+    {
+        "id": 16,
+        "name": "Fish Pepper",
+        "spiceLevel": "medium",
+        "imageUrl": "https://assets.epicurious.com/photos/6065d92cb0168183c7f5c99e/6:4/w_1600,c_limit/fish_pepper_IG_V1_VOG_final.jpg"
+    },
+    {
+        "id": 17,
+        "name": "Habanada",
+        "spiceLevel": "mild",
+        "imageUrl": "https://a6ciswdyxn-flywheel.netdna-ssl.com/wp-content/uploads/2015/03/Habanada-The-Unmasked-Habanero3-1oo1rxd.jpg"
+    },
+    {
+        "id": 18,
+        "name": "Serrano",
+        "spiceLevel": "medium",
+        "imageUrl": "http://www.thedailygarden.us/uploads/4/5/4/9/45493619/editor/serano.png?1599237015"
+    }
+]

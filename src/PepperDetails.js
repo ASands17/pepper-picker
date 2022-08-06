@@ -27,18 +27,18 @@ const PepperDetails = () => {
 
     return(
         <div className="detailsDisplay">
-            <h1> {pepperInfo.name} </h1>
-            <img className="detailsDisplayImage" src={pepperInfo.imageUrl} />
+            <h1 data-cy="details-name"> {pepperInfo.name} </h1>
+            <img data-cy="details-image" className="detailsDisplayImage" src={pepperInfo.imageUrl} />
             <h2>Care Instructions</h2>
-            <p> {pepperInfo.waterInfo} </p>
-            <p> {pepperInfo.sunInfo} </p>
-            <p> {pepperInfo.harvestInfo} </p>
+            <p data-cy="details-water"> {pepperInfo.waterInfo} </p>
+            <p data-cy="details-sun"> {pepperInfo.sunInfo} </p>
+            <p data-cy="details-harvest"> {pepperInfo.harvestInfo} </p>
             <h2>More information</h2>
-            <p> Origin: {pepperInfo.origin}</p>
-            <p> {pepperInfo.flavorProfile} </p>
-            <p> {pepperInfo.scovilleUnits} </p>
-            <p> {pepperInfo.funFact} </p>
-            <p> {pepperInfo.seedLink} </p>
+            <p data-cy="details-origin"> Origin: {pepperInfo.origin}</p>
+            <p data-cy="details-flavor"> {pepperInfo.flavorProfile} </p>
+            <p data-cy="details-scoville"> {pepperInfo.scovilleUnits} </p>
+            <p data-cy="details-fact"> {pepperInfo.funFact} </p>
+            <p data-cy="details-link"> {pepperInfo.seedLink} </p>
         </div>
     )
 }
