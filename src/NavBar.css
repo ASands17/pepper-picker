@@ -5,3 +5,8 @@ nav {
     align-items: center;
     height: 6em;
 }
+
+.is-active {
+    font-weight: bold;
+    font-style: italic;
+}

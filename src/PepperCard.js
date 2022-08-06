@@ -14,7 +14,7 @@ const PepperCard = ({pepper, selected, isChecked}) => {
 
     return (
         <div className="pepperCard">
-            <Link to={`peppers/${pepper.id}`}>
+            <Link to={`peppers/${pepper.id}`} style={{ textDecoration: 'none' }}>
             <h2 data-cy="pepper-name-link">{pepper.name}</h2>
             </Link>
             <img className="pepperCardImage" src={pepper.imageUrl} />
