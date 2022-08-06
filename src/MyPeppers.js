@@ -9,7 +9,7 @@ const MyPeppers = ({selectedPeppers, pepperPreview, error, selected}) => {
             {selectedPeppers.map(pepper => {
                 if (pepper.isSelected) {
                     return(
-                        <div className="cards-holder">
+                        <div data-cy="selected-cards-holder" className="cards-holder">
                         <PepperCard key={pepper.id.toString()} pepper={pepper} selected={selected} isChecked={true}/>
                         </div>
                 
