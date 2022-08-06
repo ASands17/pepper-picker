@@ -6,15 +6,14 @@ const NavBar= () => {
     return (
         <nav data-cy="navbar" className="navbar">
             <h1> Pepper Picker </h1>
-            <NavLink to="/" activeClassName="is-active" exact={true} style={{ textDecoration: 'none' }}>
-                <p> All Peppers </p>
-            </NavLink>
-            <NavLink to="/my-peppers" activeClassName="is-active" exact={true} style={{ textDecoration: 'none' }}>
-                <p data-cy="my-peppers-link"> My Peppers </p>
-            </NavLink>
+                <NavLink to="/" activeClassName="is-active" exact={true} style={{ textDecoration: 'none' }}>
+                    <p className="links"> All Peppers </p>
+                </NavLink>
+                <NavLink to="/my-peppers" activeClassName="is-active" exact={true} style={{ textDecoration: 'none' }}>
+                    <p data-cy="my-peppers-link" className="links"> My Peppers </p>
+                </NavLink>
         </nav>
     )
 }
-
 
 export default NavBar;
