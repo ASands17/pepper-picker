@@ -26,19 +26,23 @@ const PepperDetails = () => {
     }, []);
 
     return(
-        <div className="detailsDisplay">
-            <h1 data-cy="details-name"> {pepperInfo.name} </h1>
-            <img data-cy="details-image" className="detailsDisplayImage" src={pepperInfo.imageUrl} />
-            <h2>Care Instructions</h2>
-            <p data-cy="details-water"> {pepperInfo.waterInfo} </p>
-            <p data-cy="details-sun"> {pepperInfo.sunInfo} </p>
-            <p data-cy="details-harvest"> {pepperInfo.harvestInfo} </p>
-            <h2>More information</h2>
-            <p data-cy="details-origin"> Origin: {pepperInfo.origin}</p>
-            <p data-cy="details-flavor"> {pepperInfo.flavorProfile} </p>
-            <p data-cy="details-scoville"> {pepperInfo.scovilleUnits} </p>
-            <p data-cy="details-fact"> {pepperInfo.funFact} </p>
-            <p data-cy="details-link"> {pepperInfo.seedLink} </p>
+        <div> {errorDetails ? (<h2 data-cy="error-message" className="error-message"> {errorDetails} </h2>) 
+        : (
+            <div className="detailsDisplay">
+                <h1 data-cy="details-name"> {pepperInfo.name} </h1>
+                <img data-cy="details-image" className="detailsDisplayImage" src={pepperInfo.imageUrl} />
+                <h2>Care Instructions</h2>
+                <p data-cy="details-water"> {pepperInfo.waterInfo} </p>
+                <p data-cy="details-sun"> {pepperInfo.sunInfo} </p>
+                <p data-cy="details-harvest"> {pepperInfo.harvestInfo} </p>
+                <h2>More information</h2>
+                <p data-cy="details-origin"> Origin: {pepperInfo.origin}</p>
+                <p data-cy="details-flavor"> {pepperInfo.flavorProfile} </p>
+                <p data-cy="details-scoville"> {pepperInfo.scovilleUnits} </p>
+                <p data-cy="details-fact"> {pepperInfo.funFact} </p>
+                <p data-cy="details-link"> {pepperInfo.seedLink} </p>
+            </div>
+            )}
         </div>
     )
 }

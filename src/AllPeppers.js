@@ -15,8 +15,14 @@ const AllPeppers= ({pepperPreview, error, selected}) => {
     })
 
     return(
-        <div className="grid" data-cy="grid">
-        {pepperPreviews}
+        <div>
+            {error ? (
+                <h2 data-cy="error-message" className="error-message"> {error} </h2>
+            ) : (
+            <div className="grid" data-cy="grid">
+            {pepperPreviews}
+            </div>
+            )}
         </div>
     )
 }
