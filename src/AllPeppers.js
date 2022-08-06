@@ -6,11 +6,10 @@ import "./AllPeppers.css"
 
 const AllPeppers= ({pepperPreview, error, selected}) => {
 
-
     let pepperPreviews= pepperPreview.map(pepper => {
         return(
             <div className="all-cards-holder" data-cy="all-cards-holder">
-            <PepperCard pepper={pepper} selected={selected} isChecked={pepper.isSelected}/>
+                <PepperCard key={pepper.id.toString()} pepper={pepper} selected={selected} isChecked={pepper.isSelected}/>
             </div>
         )
     })
