@@ -7,6 +7,22 @@ describe('All Peppers Flow', () => {
     cy.visit('http://localhost:3000/')
   })
 
+  it('Should display an error to the user if pepper data does not load', () => {
+    cy.intercept('GET', 'https://polar-inlet-62371.herokuapp.com/peppers', {
+      statusCode: 400
+    })
+    cy.visit('http://localhost:3000/')
+    .contains('.error-message', 'Sorry, there has been a problem loading your page. Try again!')
+  })
+
+  it('Should display an error to the user if pepper data does not load', () => {
+    cy.intercept('GET', 'https://polar-inlet-62371.herokuapp.com/peppers', {
+      statusCode: 500
+    })
+    cy.visit('http://localhost:3000/')
+    .contains('.error-message', 'Sorry, there has been a problem loading your page. Try again!')
+  })
+
   it('Should be able to display the title of the page', () => {
     cy.get('[data-cy="navbar"]')
       .contains('Pepper Picker')
