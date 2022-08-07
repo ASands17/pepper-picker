@@ -1,6 +1,6 @@
 import React, { FC, useEffect, useState } from "react";
 import { Route, Link, NavLink } from "react-router-dom";
-import "./NavBar.css"
+import "../Css/NavBar.css"
 import { FaPepperHot } from 'react-icons/fa';
 import { GrFavorite } from 'react-icons/gr';
 import { RiPlantLine } from 'react-icons/ri'

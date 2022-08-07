@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import AllPeppers from "./AllPeppers"
-import MyPeppers from "./MyPeppers"
-import PepperDetails from "./PepperDetails"
-import NavBar from "./NavBar.js"
+import AllPeppers from "./Components/AllPeppers"
+import MyPeppers from "./Components/MyPeppers"
+import PepperDetails from "./Components/PepperDetails"
+import NavBar from "./Components/NavBar.js"
 import { Route } from "react-router-dom";
 
 

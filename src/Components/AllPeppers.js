@@ -1,7 +1,7 @@
 import React, { FC, useState } from "react";
 import PropTypes from 'prop-types';
 import PepperCard from "./PepperCard"
-import "./AllPeppers.css"
+import "../Css/AllPeppers.css"
 
 
 const AllPeppers= ({pepperPreview, error, selected}) => {
