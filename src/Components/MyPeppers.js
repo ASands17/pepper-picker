@@ -9,7 +9,7 @@ const MyPeppers = ({selectedPeppers, pepperPreview, error, selected}) => {
         <div> {error ? (
             <h2 data-cy="error-message" className="error-message"> {error} </h2>
         ) : (
-            <div className="grid">
+            <div className="my-peppers-grid">
                 {selectedPeppers.map(pepper => {
                     if (pepper.isSelected) {
                         return(

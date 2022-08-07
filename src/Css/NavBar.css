@@ -1,5 +1,6 @@
 nav {
     display: flex;
+    width: 100%;
     justify-content: space-evenly;
     align-items: center;
     height: 8em;
@@ -39,4 +40,27 @@ h1 {
 
 .all-icon {
     font-size: 25px;  
+}
+
+@media screen and (max-width: 600px) {
+    h1 {
+        margin-left: 20px;
+        font-size: 2.0em;
+        color: #11270B;
+    }
+
+    .pepper-icon {
+        font-size: 25px;
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 8em;
+        background-color: #8CB369;
+        box-shadow: 0 0 5px 0 rgb(70,89,52);
+        font-family: 'Quicksand', sans-serif;
+    }
+
 }
