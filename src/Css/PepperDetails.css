@@ -42,3 +42,29 @@
     color: rgb(70,89,52);
     font-weight: bold;
 }
+
+@media screen and (max-width: 600px) {
+    .details-display-image {
+            margin-top: 20px;
+            padding-left: 20px;
+            padding-right: 20px;
+            height: 420px;
+            width: 320px;
+        }
+        .details-display {
+            display: flex;
+            flex-direction: column;
+            font-size: 20px;
+            font-family: 'Quicksand', sans-serif;
+        }
+        .information-list {
+            list-style-type: none;
+            margin-left: 20px;
+        }
+        
+        .information-header {
+            margin-top: 0;
+            margin-left: 20px;
+        }
+
+}

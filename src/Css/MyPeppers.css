@@ -1,7 +1,15 @@
-.grid {
+.my-peppers-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(3, 1fr);
     grid-column-gap: 0px;
     grid-row-gap: 0px;
+}
+
+@media screen and (max-width: 600px) {
+    .my-peppers-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: 16fr;
+        grid-template-columns: repeat(auto-fill, minmax(385px, 1fr));
+    }
 }
