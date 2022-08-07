@@ -12,7 +12,7 @@ describe('All Peppers Flow', () => {
       statusCode: 400
     })
     cy.visit('http://localhost:3000/')
-    .contains('.error-message', 'Sorry, there has been a problem loading your page. Try again!')
+      .contains('.error-message', 'Sorry, there has been a problem loading your page. Try again!')
   })
 
   it('Should display an error to the user if pepper data does not load', () => {
@@ -20,7 +20,7 @@ describe('All Peppers Flow', () => {
       statusCode: 500
     })
     cy.visit('http://localhost:3000/')
-    .contains('.error-message', 'Sorry, there has been a problem loading your page. Try again!')
+      .contains('.error-message', 'Sorry, there has been a problem loading your page. Try again!')
   })
 
   it('Should be able to display the pepper name and picture', () => {
@@ -49,6 +49,12 @@ describe('All Peppers Flow', () => {
     cy.get('[data-cy="details-fact"]')
       .should('contain','The habanada pepper was developed by Michael Mazourek, a plant breeder at Cornell.')
     cy.get('[data-cy="details-link"]')
-      .should('contain','https://www.rareseeds.com/habanada-sweet-pepper')
+      .should('contain','Buy seeds HERE!')
+  })
+
+  it('Should be able to click a link to buy seeds', () => {
+    cy.get('[data-cy="details-link"]')
+      .should('contain','Buy seeds HERE!')
+      .click()
   })
 })

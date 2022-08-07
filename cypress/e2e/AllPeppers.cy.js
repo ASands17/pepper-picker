@@ -65,10 +65,11 @@ describe('All Peppers Flow', () => {
 
   it('Should route to My Peppers page when link is clicked"', () => {
     cy.get('[data-cy="all-cards-holder"]').eq(1)
-    .find('[data-cy="checkbox"]')
-    .check()
+      .find('[data-cy="checkbox"]')
+      .check()
     cy.get('[data-cy="my-peppers-link"]')
       .click()
     cy.url().should('eq', 'http://localhost:3000/my-peppers')
   })
+
 })
