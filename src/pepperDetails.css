@@ -1,18 +1,18 @@
-.detailsName {
+.details-name {
     margin-left: 20px;
     font-size: 2em;
     padding-bottom: 10px;
     text-decoration: underline;
 }
 
-.detailsDisplay {
+.details-display {
     display: flex;
     flex-direction: row;
     font-size: 20px;
     font-family: 'Quicksand', sans-serif;
 }
 
-.detailsDisplayImage {
+.details-display-image {
     margin-top: 20px;
     padding-left: 20px;
     padding-right: 20px;
@@ -20,25 +20,25 @@
     width: 425px;
 }
 
-.informationList {
+.information-list {
     list-style-type: none;
 }
 
-.informationHeader {
+.information-header {
     margin-top: 0;
 }
 
-.boldInformation {
+.bold-information {
     font-weight: bold;
 }
 
-.buyHere {
+.buy-here {
     font-size: 1.3em;
     color: black;
     padding-bottom: 0;
 }
 
-.buyHere:hover {
+.buy-here:hover {
     color: rgb(70,89,52);
     font-weight: bold;
 }

@@ -13,16 +13,16 @@ const PepperCard = ({pepper, selected, isChecked}) => {
     }
 
     return (
-        <div className="pepperCard">
+        <div className="pepper-card">
             <Link to={`peppers/${pepper.id}`} style={{ textDecoration: 'none' }}>
-            <h2 className="pepperName" data-cy="pepper-name-link">{pepper.name}</h2>
+            <h2 className="pepper-name" data-cy="pepper-name-link">{pepper.name}</h2>
             </Link>
-            <img className="pepperCardImage" src={pepper.imageUrl} />
-            <h2 className="pepperSpice">Spice Level: {pepper.spiceLevel}</h2>
+            <img className="pepper-card-image" src={pepper.imageUrl} />
+            <h2 className="pepper-spice">Spice Level: {pepper.spiceLevel}</h2>
             
-            <label className="pepperLabel">
+            <label className="pepper-label">
                 <input
-                className="pepperCheckbox"
+                className="pepper-checkbox"
                 data-cy="checkbox"
                 type="checkbox"
                 checked={checked}

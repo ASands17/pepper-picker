@@ -1,19 +1,18 @@
-.pepperCard {
+.pepper-card {
     display: flex;
     flex-direction: column;
-    /* border: 1px solid black; */
     justify-content: center;
     align-items: center;
     padding-bottom: 30px;
     font-family: 'Quicksand', sans-serif;
 }
 
-.pepperCardImage {
+.pepper-card-image {
     height: 370px;
     width: 320px;
 }
 
-.pepperName {
+.pepper-name {
     padding: none;
     font-size: 2em;
     color: rgb(0, 0, 0);
@@ -35,16 +34,16 @@
     transition: background-size 400ms;
 }
 
-.pepperName:hover {
+.pepper-name:hover {
     background-size: 0 3px, 100% 3px;
     color: green
 }
 
-.pepperSpice {
+.pepper-spice {
     font-size: 1.40em;
 }
 
-.pepperLabel {
+.pepper-label {
     font-size: 1.25em;
     color: rgb(20, 30, 1);
 }
