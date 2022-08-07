@@ -9,7 +9,7 @@ nav {
 }
 
 h1 {
-    font-size: 3em;
+    font-size: 3.5em;
     color: #11270B;
 }
 
@@ -27,4 +27,16 @@ h1 {
 .is-active {
     font-weight: bold;
     border-bottom: #0f3011 0.125em solid;
+}
+
+.pepper-icon {
+    font-size: 45px;
+}
+
+.heart-icon {
+    font-size: 20px;
+}
+
+.all-icon {
+    font-size: 25px;  
 }

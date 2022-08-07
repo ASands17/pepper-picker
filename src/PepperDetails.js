@@ -1,6 +1,9 @@
 import React, {useState, useEffect} from "react";
 import {useParams} from 'react-router-dom';
 import "./PepperDetails.css"
+import { FiSun } from 'react-icons/fi';
+import { GiWateringCan } from 'react-icons/gi';
+import { TbPepper } from 'react-icons/tb';
 
 const PepperDetails = () => {
     const params = useParams();
@@ -28,19 +31,31 @@ const PepperDetails = () => {
     return(
         <div> {errorDetails ? (<h2 data-cy="error-message" className="error-message"> {errorDetails} </h2>) 
         : (
-            <div className="detailsDisplay">
-                <h1 data-cy="details-name"> {pepperInfo.name} </h1>
-                <img data-cy="details-image" className="detailsDisplayImage" src={pepperInfo.imageUrl} />
-                <h2>Care Instructions</h2>
-                <p data-cy="details-water"> {pepperInfo.waterInfo} </p>
-                <p data-cy="details-sun"> {pepperInfo.sunInfo} </p>
-                <p data-cy="details-harvest"> {pepperInfo.harvestInfo} </p>
-                <h2>More information</h2>
-                <p data-cy="details-origin"> Origin: {pepperInfo.origin}</p>
-                <p data-cy="details-flavor"> {pepperInfo.flavorProfile} </p>
-                <p data-cy="details-scoville"> {pepperInfo.scovilleUnits} </p>
-                <p data-cy="details-fact"> {pepperInfo.funFact} </p>
-                <p data-cy="details-link"> {pepperInfo.seedLink} </p>
+            <div>
+                
+                <div className="detailsDisplay">
+                    <div>
+                        <img data-cy="details-image" className="detailsDisplayImage" src={pepperInfo.imageUrl} />
+                    </div>
+                    
+                    <div className="care-instructions">
+                    <h1 className="detailsName" data-cy="details-name"> {pepperInfo.name} </h1>
+                        <h2 className="informationHeader">Care Instructions</h2>
+                        <ul className="informationList">
+                            <li data-cy="details-water"> <GiWateringCan /> {pepperInfo.waterInfo}</li>
+                            <li data-cy="details-sun"> <FiSun /> {pepperInfo.sunInfo}</li>
+                            <li data-cy="details-harvest"> <TbPepper /> {pepperInfo.harvestInfo}</li>
+                        </ul>
+                        <h2>More information</h2>
+                        <ul className="informationList">
+                            <li data-cy="details-origin"><span className="boldInformation">Origin: </span>{pepperInfo.origin}</li>
+                            <li data-cy="details-flavor"><span className="boldInformation">Flavor Profile: </span>{pepperInfo.flavorProfile} </li>
+                            <li data-cy="details-scoville"><span className="boldInformation">Scoville Units: </span>{pepperInfo.scovilleUnits}</li>
+                            <li data-cy="details-fact"><span className="boldInformation">Fun Fact: </span> {pepperInfo.funFact} </li>
+                            <p data-cy="details-link">Buy seeds <a className="buyHere" href={pepperInfo.seedLink} target="_blank">HERE!</a> </p>
+                        </ul>
+                    </div>
+                </div>
             </div>
             )}
         </div>
