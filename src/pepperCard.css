@@ -1,12 +1,49 @@
-.pepperCard {
+.pepper-card {
     display: flex;
     flex-direction: column;
-    border: 1px solid black;
     justify-content: center;
     align-items: center;
+    padding-bottom: 30px;
+    font-family: 'Quicksand', sans-serif;
 }
 
-.pepperCardImage {
-    height: 300px;
-    width: 250px;
+.pepper-card-image {
+    height: 370px;
+    width: 320px;
+}
+
+.pepper-name {
+    padding: none;
+    font-size: 2em;
+    color: rgb(0, 0, 0);
+    background:
+        linear-gradient(
+        to right,
+        rgb(42, 125, 53),
+        rgb(61, 139, 46)
+        ),
+        linear-gradient(
+        to right,
+        rgb(60, 255, 0),
+        rgb(255, 162, 0),
+        rgb(233, 56, 16)
+    );
+    background-size: 100% 3px, 0 3px;
+    background-position: 100% 100%, 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size 400ms;
+}
+
+.pepper-name:hover {
+    background-size: 0 3px, 100% 3px;
+    color: green
+}
+
+.pepper-spice {
+    font-size: 1.40em;
+}
+
+.pepper-label {
+    font-size: 1.25em;
+    color: rgb(20, 30, 1);
 }
