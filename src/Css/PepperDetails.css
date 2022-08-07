@@ -68,3 +68,11 @@
         }
 
 }
+
+.error-container {
+    display: flex;
+    justify-content: center;
+}
+.error-message {
+    display: block;
+}

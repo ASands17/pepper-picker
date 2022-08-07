@@ -5,7 +5,7 @@ import "../Css/AllPeppers.css"
 const AllPeppers= ({pepperPreview, error, selected}) => {
     let pepperPreviews= pepperPreview.map(pepper => {
         return(
-            <div className="all-cards-holder" data-cy="all-cards-holder">
+            <div key={pepper.name} className="all-cards-holder" data-cy="all-cards-holder">
                 <PepperCard 
                 key={pepper.id.toString()} 
                 pepper={pepper} 

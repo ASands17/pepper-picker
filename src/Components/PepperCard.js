@@ -13,7 +13,7 @@ const PepperCard = ({pepper, selected, isChecked}) => {
     }
 
     return (
-        <div className="pepper-card">
+        <div className="pepper-card" key={pepper.id}>
             <Link to={`peppers/${pepper.id}`} style={{ textDecoration: 'none' }}>
                 <h2 className="pepper-name" data-cy="pepper-name-link">{pepper.name}</h2>
             </Link>
