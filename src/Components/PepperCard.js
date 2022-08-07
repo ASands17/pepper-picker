@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import "./PepperCard.css"
+import "../Css/PepperCard.css"
 import React, { useState } from "react";
 import PropTypes from 'prop-types';
 

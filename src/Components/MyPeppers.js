@@ -1,6 +1,7 @@
 import React, { FC, useState, useEffect } from "react";
 import PepperCard from "./PepperCard.js"
 import PropTypes from 'prop-types';
+import "../Css/MyPeppers.css"
 
 const MyPeppers = ({selectedPeppers, pepperPreview, error, selected}) => {
     
