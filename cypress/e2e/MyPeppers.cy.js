@@ -8,7 +8,7 @@ describe('My Peppers Flow', () => {
       statusCode: 400
     })
     cy.visit('http://localhost:3000/')
-    .contains('.error-message', 'Sorry, there has been a problem loading your page. Try again!')
+      .contains('.error-message', 'Sorry, there has been a problem loading your page. Try again!')
   })
 
   it('Should display an error to the user if pepper data does not load', () => {
@@ -16,7 +16,7 @@ describe('My Peppers Flow', () => {
       statusCode: 500
     })
     cy.visit('http://localhost:3000/')
-    .contains('.error-message', 'Sorry, there has been a problem loading your page. Try again!')
+      .contains('.error-message', 'Sorry, there has been a problem loading your page. Try again!')
   })
 
   it('Should be able to display the title of the page', () => {
