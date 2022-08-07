@@ -29,15 +29,14 @@ const PepperDetails = () => {
     }, []);
 
     return(
-        <div> {errorDetails ? (<h2 data-cy="error-message" className="error-message"> {errorDetails} </h2>) 
-        : (
+        <div> {errorDetails ? (
+            <h2 data-cy="error-message" className="error-message"> {errorDetails} </h2>
+        ) : (
             <div>
-                
                 <div className="details-display">
                     <div>
                         <img data-cy="details-image" className="details-display-image" src={pepperInfo.imageUrl} />
                     </div>
-                    
                     <div className="care-instructions">
                     <h1 className="details-name" data-cy="details-name"> {pepperInfo.name} </h1>
                         <h2 className="information-header">Care Instructions</h2>
