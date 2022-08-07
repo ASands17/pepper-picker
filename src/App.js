@@ -3,7 +3,8 @@ import AllPeppers from "./Components/AllPeppers"
 import MyPeppers from "./Components/MyPeppers"
 import PepperDetails from "./Components/PepperDetails"
 import NavBar from "./Components/NavBar.js"
-import { Route } from "react-router-dom";
+import NotFound from "./Components/NotFound.js"
+import { Route, Switch} from "react-router-dom";
 
 
 const App= () => {
@@ -16,7 +17,7 @@ const App= () => {
     try {
     const response = await fetch("https://polar-inlet-62371.herokuapp.com/peppers");
     const peppers = await response.json();
-    const allPeppers = peppers.map(pep => ({...pep, isSelected: false}))
+    const allPeppers = peppers.map(pep => ({...pep, isSelected: false }))
 
     setPeppers(allPeppers);
     } catch (error) {
@@ -41,14 +42,13 @@ const getSelected = (id, isChecked) => {
     }
   });
   setPeppers(peppers);
-
-  //sets peppers with true/false selected
   setSelectedPeppers(peppers.filter(pep => pep.isSelected))
 }
 
   return(
     <div>
       <NavBar />
+      <Switch>
       <Route
       exact path="/"
       render={() => (
@@ -70,9 +70,13 @@ const getSelected = (id, isChecked) => {
         />
       )}
       />
-      <Route path="/peppers/:id">
+      <Route exact path="/peppers/:id">
           <PepperDetails />
-        </Route>
+      </Route>
+      <Route path="*">
+        <NotFound />
+      </Route>
+      </Switch>
   
     </div>
   )

@@ -16,7 +16,11 @@ const PepperDetails = () => {
         try {
             const response = await fetch(`https://polar-inlet-62371.herokuapp.com/peppers/${currentId}`);
             const allInfo = await response.json();
-            setPepperInfo(allInfo[0]);
+            if (allInfo.length === 0) {
+                setErrorDetails("Sorry, we can't find this pepper. Please try again!")
+            } else {
+                setPepperInfo(allInfo[0]);
+            }
         } catch (error) {
             setErrorDetails(
                 "Sorry, there has been a problem loading your page. Try again!"
@@ -30,7 +34,9 @@ const PepperDetails = () => {
 
     return(
         <div> {errorDetails ? (
-            <h2 data-cy="error-message" className="error-message"> {errorDetails} </h2>
+            <div className="error-container">
+                <h2 data-cy="error-message" className="error-message"> {errorDetails} </h2>
+            </div>
         ) : (
             <div>
                 <div className="details-display">
