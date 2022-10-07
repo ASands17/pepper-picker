@@ -15,7 +15,6 @@ const AllPeppers= ({pepperPreview, error, selected}) => {
         )
     })
 
-    //& conditionally rendering either pepperPreviews page or error page depending on presence of error
 
     return(
         <div>
