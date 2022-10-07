@@ -9,13 +9,12 @@ const MyPeppers = ({selectedPeppers, error, selected}) => {
         ) : (
             <div className="my-peppers-grid">
                 {selectedPeppers.map(pepper => {
-                    if (pepper.isSelected) {
                         return(
                             <div data-cy="selected-cards-holder" className="cards-holder">
                                 <PepperCard key={pepper.id.toString()} pepper={pepper} selected={selected} isChecked={true}/>
                             </div>
                     )}
-                })}
+                )}
             </div>
         )}
         </div>
