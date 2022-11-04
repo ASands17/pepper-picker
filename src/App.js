@@ -15,7 +15,7 @@ const App= () => {
 
   const getPeppers = async () => {
     try {
-    const response = await fetch("https://polar-inlet-62371.herokuapp.com/peppers");
+    const response = await fetch("https://web-production-c00b.up.railway.app/peppers");
     const peppers = await response.json();
     const allPeppers = peppers.map(pep => ({...pep, isSelected: false }))
 
