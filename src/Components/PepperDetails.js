@@ -14,7 +14,7 @@ const PepperDetails = () => {
     
     const getDetails = async () => {
         try {
-            const response = await fetch(`https://polar-inlet-62371.herokuapp.com/peppers/${currentId}`);
+            const response = await fetch(`https://web-production-c00b.up.railway.app/peppers/${currentId}`);
             const allInfo = await response.json();
             if (allInfo.length === 0) {
                 setErrorDetails("Sorry, we can't find this pepper. Please try again!")
