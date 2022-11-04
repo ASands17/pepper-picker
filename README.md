@@ -35,7 +35,7 @@ Pepper Picker is a great app for anyone who wants to enjoy the zen world of gard
 4. Run `npm start` to run app
 
 ### Deployed Link
-View the app [here](https://pepper-picker.herokuapp.com/)!
+View the app [here](https://pepper-picker.vercel.app/)!
 
 ### Features
 - User can view a variety of peppers and their spice levels on the homepage
