@@ -67,5 +67,4 @@ const PepperDetails = () => {
     )
 }
 
-
 export default PepperDetails;
