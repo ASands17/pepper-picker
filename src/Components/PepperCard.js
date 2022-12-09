@@ -3,13 +3,13 @@ import "../Css/PepperCard.css"
 import React, { useState } from "react";
 import PropTypes from 'prop-types';
 
-const PepperCard = ({pepper, selected, isChecked}) => {
+const PepperCard = ({pepper, getSelected, isChecked}) => {
     
     const [checked, setChecked] = useState(isChecked);
     
     let handleChange = () => {
         setChecked(!checked);
-        selected(pepper.id, !checked);
+        getSelected(pepper.id, !checked);
     }
 
     return (

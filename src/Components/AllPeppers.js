@@ -2,14 +2,14 @@ import PropTypes from 'prop-types';
 import PepperCard from "./PepperCard"
 import "../Css/AllPeppers.css"
 
-const AllPeppers= ({pepperPreview, error, selected}) => {
+const AllPeppers= ({pepperPreview, error, getSelected}) => {
     let pepperPreviews= pepperPreview.map(pepper => {
         return(
             <div key={pepper.name} className="all-cards-holder" data-cy="all-cards-holder">
                 <PepperCard 
                 key={pepper.id.toString()} 
                 pepper={pepper} 
-                selected={selected} 
+                getSelected={getSelected} 
                 isChecked={pepper.isSelected}/>
             </div>
         )

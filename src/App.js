@@ -56,7 +56,7 @@ const getSelected = (id, isChecked) => {
         <AllPeppers 
         pepperPreview={peppers}
         error={error}
-        selected={getSelected} 
+        getSelected={getSelected} 
         />
       )}
       />
@@ -67,7 +67,7 @@ const getSelected = (id, isChecked) => {
         selectedPeppers={selectedPeppers}
         pepperPreview={peppers}
         error={error}
-        selected={getSelected} 
+        getSelected={getSelected} 
         />
       )}
       />
