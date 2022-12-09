@@ -1,6 +1,6 @@
 Cypress.Commands.add("create", () => {
         const baseURL = 'http://localhost:3000/peppers';
-        cy.intercept('GET', 'https://polar-inlet-62371.herokuapp.com/peppers', {
+        cy.intercept('GET', 'https://web-production-c00b.up.railway.app/peppers', {
             fixture: "peppers.json",
             statusCode: 200,
         })

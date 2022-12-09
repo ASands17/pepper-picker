@@ -1,6 +1,6 @@
 describe('All Peppers Flow', () => {
   beforeEach(()=> {
-    cy.intercept('GET', 'https://polar-inlet-62371.herokuapp.com/peppers', {
+    cy.intercept('GET', 'https://web-production-c00b.up.railway.app/peppers', {
       fixture: "peppers.json",
       statusCode: 200,
     })
@@ -8,7 +8,7 @@ describe('All Peppers Flow', () => {
   })
 
   it('Should display an error to the user if pepper data does not load', () => {
-    cy.intercept('GET', 'https://polar-inlet-62371.herokuapp.com/peppers', {
+    cy.intercept('GET', 'https://web-production-c00b.up.railway.app/peppers', {
       statusCode: 400
     })
     cy.visit('http://localhost:3000/')
@@ -16,7 +16,7 @@ describe('All Peppers Flow', () => {
   })
 
   it('Should display an error to the user if pepper data does not load', () => {
-    cy.intercept('GET', 'https://polar-inlet-62371.herokuapp.com/peppers', {
+    cy.intercept('GET', 'https://web-production-c00b.up.railway.app/peppers', {
       statusCode: 500
     })
     cy.visit('http://localhost:3000/')
