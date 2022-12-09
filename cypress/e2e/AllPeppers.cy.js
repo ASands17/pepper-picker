@@ -65,24 +65,23 @@ describe('All Peppers Flow', () => {
       .should('not.be.checked')
   })
 
-
-  //fix this test below!!! Does not correctly navigate to pepper details page
-
   it('Should navigate to pepper details page when pepper name is clicked', () => {
     cy.get('[data-cy="all-cards-holder"]').eq(1)
       .find('[data-cy="pepper-name-link"]')
       .should('contain', 'Habanada')
       .click()
+    cy.visit('http://localhost:3000/peppers/17')
+    
+    cy.intercept('GET', 'https://web-production-c00b.up.railway.app/peppers/17', {
+      fixture: "pepperDetails.json",
+      statusCode: 200,
+    })
 
-    // cy.visit('http://localhost:3000/peppers/17')
-    // cy.intercept('GET', 'https://web-production-c00b.up.railway.app/peppers/17', {
-    //   fixture: "pepperDetails.json",
-    //   statusCode: 200,
-    // })
-
-
-      //may need to intercept here with pepper details fixture?
     cy.url().should('eq', 'http://localhost:3000/peppers/17')
+    cy.get('[data-cy="details-name"]')
+      .contains('Habanada')
+    cy.get('[data-cy="details-image"]')
+      .should('be.visible')
   })
 
   it('Should route to My Peppers page when link is clicked"', () => {

@@ -8,18 +8,18 @@ describe('All Peppers Flow', () => {
   })
 
   it('Should display an error to the user if pepper data does not load', () => {
-    cy.intercept('GET', 'https://web-production-c00b.up.railway.app/peppers', {
+    cy.intercept('GET', 'https://web-production-c00b.up.railway.app/peppers/17', {
       statusCode: 400
     })
-    cy.visit('http://localhost:3000/')
+    cy.visit('http://localhost:3000/peppers/17')
       .contains('.error-message', 'Sorry, there has been a problem loading your page. Try again!')
   })
 
   it('Should display an error to the user if pepper data does not load', () => {
-    cy.intercept('GET', 'https://web-production-c00b.up.railway.app/peppers', {
+    cy.intercept('GET', 'https://web-production-c00b.up.railway.app/peppers/17', {
       statusCode: 500
     })
-    cy.visit('http://localhost:3000/')
+    cy.visit('http://localhost:3000/peppers/17')
       .contains('.error-message', 'Sorry, there has been a problem loading your page. Try again!')
   })
 
