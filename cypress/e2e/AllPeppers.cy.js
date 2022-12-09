@@ -49,18 +49,39 @@ describe('All Peppers Flow', () => {
       .should('be.visible')
   })
 
-  it('Should have checkboxes that can be checked"', () => {
+  it('Should have checkboxes that can be checked', () => {
     cy.get('[data-cy="all-cards-holder"]').eq(1)
       .find('[data-cy="checkbox"]')
       .check()
+      .should('be.checked')
   })
 
-  it('Should navigate to pepper details page when pepper name is clicked"', () => {
+  it('Should have checkboxes that can be unchecked', () => {
+    cy.get('[data-cy="all-cards-holder"]').eq(1)
+      .find('[data-cy="checkbox"]')
+      .check()
+      .should('be.checked')
+      .uncheck()
+      .should('not.be.checked')
+  })
+
+  it('Should navigate to pepper details page when pepper name is clicked', () => {
     cy.get('[data-cy="all-cards-holder"]').eq(1)
       .find('[data-cy="pepper-name-link"]')
       .should('contain', 'Habanada')
       .click()
+    cy.visit('http://localhost:3000/peppers/17')
+    
+    cy.intercept('GET', 'https://web-production-c00b.up.railway.app/peppers/17', {
+      fixture: "pepperDetails.json",
+      statusCode: 200,
+    })
+
     cy.url().should('eq', 'http://localhost:3000/peppers/17')
+    cy.get('[data-cy="details-name"]')
+      .contains('Habanada')
+    cy.get('[data-cy="details-image"]')
+      .should('be.visible')
   })
 
   it('Should route to My Peppers page when link is clicked"', () => {
