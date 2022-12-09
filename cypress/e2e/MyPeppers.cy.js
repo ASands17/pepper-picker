@@ -7,7 +7,7 @@ describe('My Peppers Flow', () => {
     cy.intercept('GET', 'https://web-production-c00b.up.railway.app/peppers', {
       statusCode: 400
     })
-    cy.visit('http://localhost:3000/')
+    cy.visit('http://localhost:3000/my-peppers')
       .contains('.error-message', 'Sorry, there has been a problem loading your page. Try again!')
   })
 
@@ -15,7 +15,7 @@ describe('My Peppers Flow', () => {
     cy.intercept('GET', 'https://web-production-c00b.up.railway.app/peppers', {
       statusCode: 500
     })
-    cy.visit('http://localhost:3000/')
+    cy.visit('http://localhost:3000/my-peppers')
       .contains('.error-message', 'Sorry, there has been a problem loading your page. Try again!')
   })
 
