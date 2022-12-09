@@ -32,14 +32,15 @@ useEffect(() => {
   getPeppers();
 }, []);
 
-
 const getSelected = (id, isChecked) => {
   peppers.forEach((pep) => {
-    if (pep.id === id && isChecked) {
-      pep.isSelected = true;
+
+    if (pep.id === id) {
+      pep.isSelected = isChecked;
+    }
+
+    if (isChecked) {
       selectedPeppers.push(pep)
-    } if (pep.id === id && !isChecked) {
-      pep.isSelected = false;
     }
   });
   setPeppers(peppers);
