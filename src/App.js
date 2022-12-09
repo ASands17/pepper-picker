@@ -6,7 +6,6 @@ import NavBar from "./Components/NavBar.js"
 import NotFound from "./Components/NotFound.js"
 import { Route, Switch} from "react-router-dom";
 
-
 const App= () => {
 
   const [peppers, setPeppers] = useState([]);
@@ -27,20 +26,14 @@ const App= () => {
     }
   }
 
-
 useEffect(() => {
   getPeppers();
 }, []);
 
 const getSelected = (id, isChecked) => {
   peppers.forEach((pep) => {
-
     if (pep.id === id) {
       pep.isSelected = isChecked;
-    }
-
-    if (isChecked) {
-      selectedPeppers.push(pep)
     }
   });
   setPeppers(peppers);
