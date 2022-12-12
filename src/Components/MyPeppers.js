@@ -11,7 +11,11 @@ const MyPeppers = ({selectedPeppers, error, getSelected}) => {
                 {selectedPeppers.map(pepper => {
                         return(
                             <div data-cy="selected-cards-holder" className="cards-holder">
-                                <PepperCard key={pepper.id.toString()} pepper={pepper} getSelected={getSelected} isChecked={true}/>
+                                <PepperCard 
+                                key={pepper.id.toString()} 
+                                pepper={pepper} 
+                                getSelected={getSelected}
+                                isChecked={pepper.isSelected}/>
                             </div>
                     )}
                 )}
@@ -24,7 +28,7 @@ const MyPeppers = ({selectedPeppers, error, getSelected}) => {
 MyPeppers.propTypes = {
     selectedPeppers: PropTypes.array.isRequired,
     error: PropTypes.string,
-    selected: PropTypes.func.isRequired
+    getSelected: PropTypes.func.isRequired
 }
 
 export default MyPeppers;

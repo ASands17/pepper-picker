@@ -14,15 +14,13 @@ const App= () => {
 
   const getPeppers = async () => {
     try {
-    const response = await fetch("https://web-production-c00b.up.railway.app/peppers");
-    const peppers = await response.json();
-    const allPeppers = peppers.map(pep => ({...pep, isSelected: false }))
+      const response = await fetch("https://web-production-c00b.up.railway.app/peppers");
+      const peppers = await response.json();
+      const allPeppers = peppers.map(pep => ({...pep, isSelected: false }))
 
-    setPeppers(allPeppers);
+      setPeppers(allPeppers);
     } catch (error) {
-      setError(
-        "Sorry, there has been a problem loading your page. Try again!"
-        );
+        setError("Sorry, there has been a problem loading your page. Try again!");
     }
   }
 
@@ -59,7 +57,6 @@ const getSelected = (id, isChecked) => {
       render={() => (
         <MyPeppers 
         selectedPeppers={selectedPeppers}
-        pepperPreview={peppers}
         error={error}
         getSelected={getSelected} 
         />

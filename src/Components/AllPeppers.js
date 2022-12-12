@@ -15,7 +15,6 @@ const AllPeppers= ({pepperPreview, error, getSelected}) => {
         )
     })
 
-
     return(
         <div>
             {error ? (
@@ -32,7 +31,7 @@ const AllPeppers= ({pepperPreview, error, getSelected}) => {
 AllPeppers.propTypes = {
     pepperPreview: PropTypes.array.isRequired,
     error: PropTypes.string,
-    selected: PropTypes.func.isRequired
+    getSelected: PropTypes.func.isRequired
 }
 
 export default AllPeppers;
