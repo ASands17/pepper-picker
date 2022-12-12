@@ -6,7 +6,6 @@ import NavBar from "./Components/NavBar.js"
 import NotFound from "./Components/NotFound.js"
 import { Route, Switch} from "react-router-dom";
 
-
 const App= () => {
 
   const [peppers, setPeppers] = useState([]);
@@ -15,31 +14,24 @@ const App= () => {
 
   const getPeppers = async () => {
     try {
-    const response = await fetch("https://web-production-c00b.up.railway.app/peppers");
-    const peppers = await response.json();
-    const allPeppers = peppers.map(pep => ({...pep, isSelected: false }))
+      const response = await fetch("https://web-production-c00b.up.railway.app/peppers");
+      const peppers = await response.json();
+      const allPeppers = peppers.map(pep => ({...pep, isSelected: false }))
 
-    setPeppers(allPeppers);
+      setPeppers(allPeppers);
     } catch (error) {
-      setError(
-        "Sorry, there has been a problem loading your page. Try again!"
-        );
+        setError("Sorry, there has been a problem loading your page. Try again!");
     }
   }
-
 
 useEffect(() => {
   getPeppers();
 }, []);
 
-
 const getSelected = (id, isChecked) => {
   peppers.forEach((pep) => {
-    if (pep.id === id && isChecked) {
-      pep.isSelected = true;
-      selectedPeppers.push(pep)
-    } if (pep.id === id && !isChecked) {
-      pep.isSelected = false;
+    if (pep.id === id) {
+      pep.isSelected = isChecked;
     }
   });
   setPeppers(peppers);
@@ -56,7 +48,7 @@ const getSelected = (id, isChecked) => {
         <AllPeppers 
         pepperPreview={peppers}
         error={error}
-        selected={getSelected} 
+        getSelected={getSelected} 
         />
       )}
       />
@@ -65,9 +57,8 @@ const getSelected = (id, isChecked) => {
       render={() => (
         <MyPeppers 
         selectedPeppers={selectedPeppers}
-        pepperPreview={peppers}
         error={error}
-        selected={getSelected} 
+        getSelected={getSelected} 
         />
       )}
       />
